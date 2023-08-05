@@ -5,7 +5,9 @@
  * This is a class-based implementation of a Stack.
  */
 
-export class Stack<T> {
+import { IStack } from "./stack.interface";
+
+export class Stack<T> implements IStack<T> {
     private stack: T[] = [];
     private limit: number;
 
@@ -18,9 +20,7 @@ export class Stack<T> {
     }
 
     /**
-     * @function push
-     * @description - add a new element to the stack
-     * @param {T} value - the new value to add
+     * Add a new element to the stack.
      */
     push(value: T) {
         if (this.length() + 1 > this.limit) {
@@ -30,10 +30,7 @@ export class Stack<T> {
     }
 
     /**
-     * @function pop
-     * @description - remove an elmement from the top of the stack
-     * @throws will throw an error if the stack is empty
-     * @return {T} removed element
+     * Remove an elmement from the top of the stack.
      */
     pop(): T {
         if(this.length() === 0 ) {
@@ -42,17 +39,13 @@ export class Stack<T> {
         return this.stack.pop() as T;
     }
     /**
-     * @function isEmpty
-     * @description - check if the stack is empty
-     * @return {boolean} returns true if the stack is empty, otherwise false
+     * Check if the stack is empty.
      */
     isEmpty(): boolean {
         return this.length() === 0;
     }
     /**
-     * @function top
-     * @description - return the last element in the stack without removing it
-     * @return {T | null} return the last element or null if the stack is empty
+     * Return the last element in the stack without removing it.
      */
     top(): T | null {
         if(this.length() === 0) {
@@ -61,9 +54,7 @@ export class Stack<T> {
         return this.stack[this.length() - 1];
     }
     /**
-     * @function length
-     * @description - number of length in the stack
-     * @returns {number} the number of elements in the stack 
+     * Return number of length in the stack.
      */
     length(): number {
         return this.stack.length;
