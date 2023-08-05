@@ -46,7 +46,7 @@ class SinglyLinkedList<T> implements ILinkedList<T> {
 }
 ```
 
-### push 
+### Push 
 Inserts the given data as the first node of the list.
 
 #### Pseudocode 
