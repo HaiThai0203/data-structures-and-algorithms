@@ -10,13 +10,13 @@ A singly linked list is a data structure that consists of a head, tail, and leng
 
 To get started building a singly linked list we first need to create 2 classes and 1 interface. The first class will create node objects which contain a value and a next property. The second class is the Singly linked list which contains a head, tail, and size(length), an interface contains the method of linked lists. When we first instantiate a singly linked list a new node is created and is set to the head and tail properties of the linked list.
 
-```
+```typescript
 class SinglyLinkedListNode<T> {
     constructor(public data: T, public next?: SinglyLinkedListNode<T>) {}
 }
 ```
 
-```
+```typescript
 interface ILinkedList<T> {
     isEmpty(): boolean;
     get(index: number): T | null | undefined;
@@ -32,7 +32,7 @@ interface ILinkedList<T> {
 }
 ```
 
-```
+```typescript
 class SinglyLinkedList<T> implements ILinkedList<T> {
     private head?: SinglyLinkedListNode<T>;
     private tail?: SinglyLinkedListNode<T>;
@@ -66,7 +66,7 @@ end Push
 ```
 
 #### Code
-```
+```typescript
 push(data: T): void {
     const newNode: SinglyLinkedListNode<T> = new SinglyLinkedListNode<T>(data);
     if (this.isEmpty()) {
