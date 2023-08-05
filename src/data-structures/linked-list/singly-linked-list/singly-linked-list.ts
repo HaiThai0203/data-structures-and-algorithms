@@ -1,24 +1,9 @@
-import { ILinkedList } from "./linked-list.interface";
-
-/**
- * Represents a node in a linked list.
- * @data The data stored in the node.
- * @next A reference to the next node in the list. Can reference to null, if there is no next element.
- */
-class ListNode<T> {
-    constructor(public data: T, public next?: ListNode<T>) {}
-}
-
-/**
- * This is an implementation of a (singly) linked list.
- * A linked list is a data structure that stores each element with a pointer (or reference) to the next element
- * in the list. Therefore, it is a linear data structure, which can be resized dynamically during runtime, as there is
- * no fixed memory block allocated.
- */
+import { ILinkedList } from "../linked-list.interface";
+import { SinglyLinkedListNode } from "../linked-list-node";
 
 export class SinglyLinkedList<T> implements ILinkedList<T> {
-    private head?: ListNode<T>;
-    private tail?: ListNode<T>;
+    private head?: SinglyLinkedListNode<T>;
+    private tail?: SinglyLinkedListNode<T>;
     private size: number;
 
     constructor() {
@@ -42,7 +27,7 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
         if(this.isEmpty()) {
             return null;
         }
-        let currentNode: ListNode<T> = this.head!;
+        let currentNode: SinglyLinkedListNode<T> = this.head!;
         for(let i: number = 0; i < index; i++) {
             if(!currentNode.next) {
                 return null;
@@ -54,8 +39,8 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
     /**
      * Inserts the given data as the first node of the list.
      */
-    push(value: T): void {
-        const newNode: ListNode<T> = new ListNode<T>(value);
+    push(data: T): void {
+        const newNode: SinglyLinkedListNode<T> = new SinglyLinkedListNode<T>(data);
         if(this.isEmpty()) {
             this.head = newNode;
             this.tail = newNode;
@@ -72,7 +57,7 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
         if(this.isEmpty()) {
             throw new Error("Index out of bounds");
         }
-        const node: ListNode<T> = this.head!;
+        const node: SinglyLinkedListNode<T> = this.head!;
         this.head = this.head!.next;
         this.size--;
 
@@ -83,7 +68,7 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
      * Inserts the given data as a new node after the current tail.
      */
     append(data: T): void {
-        const newNode: ListNode<T> = new ListNode<T>(data);
+        const newNode: SinglyLinkedListNode<T> = new SinglyLinkedListNode<T>(data);
         if(this.isEmpty()) {
             this.head = newNode;
         }else {
@@ -109,7 +94,7 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
             return currentTail!.data;
         }
         // There are many nodes in linked list.
-        let currentNode: ListNode<T> = this.head;
+        let currentNode: SinglyLinkedListNode<T> = this.head;
         while (currentNode.next !== currentTail) {
             currentNode = currentNode.next!;
         }
@@ -120,20 +105,20 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
     /**
      * Inserts the data as a new node at the given index.x
      */
-    insertAt(index: number, value: T): void {
+    insertAt(index: number, data: T): void {
         if(index < 0 || index >= this.size) {
             throw new Error("Index out of bounds");
         }
         if(index === 0) {
-            this.push(value);
+            this.push(data);
             return;
         }
         if(index === this.size) {
-            this.append(value);
+            this.append(data);
             return;
         }
-        const newNode: ListNode<T> = new ListNode<T>(value);
-        let currentNode: ListNode<T> | undefined = this.head;
+        const newNode: SinglyLinkedListNode<T> = new SinglyLinkedListNode<T>(data);
+        let currentNode: SinglyLinkedListNode<T> | undefined = this.head;
         for(let i: number = 0; i < index - 1; i++) {
             currentNode = currentNode?.next;
         }
@@ -155,8 +140,8 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
         if(index === this.size - 1) {
             return this.remove();
         }
-        let previousNode: ListNode<T> | undefined;
-        let currentNode: ListNode<T> | undefined = this.head;
+        let previousNode: SinglyLinkedListNode<T> | undefined;
+        let currentNode: SinglyLinkedListNode<T> | undefined = this.head;
         for(let i: number = 0; i < index; i++) {
             if(i === index - 1) {
                 previousNode = currentNode;
@@ -180,7 +165,7 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
      */
     toArray(): (T | undefined)[] {
         const array: T[] = [];
-        let currentNode: ListNode<T> | undefined = this.head;
+        let currentNode: SinglyLinkedListNode<T> | undefined = this.head;
         while(currentNode) {
             array.push(currentNode.data);
             currentNode = currentNode.next;
