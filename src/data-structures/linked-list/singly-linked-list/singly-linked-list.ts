@@ -12,7 +12,7 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
         this.size = 0;
     }
     /**
-     * Returns true if the list is empty..
+     * Returns true if the list is empty.
      */
     isEmpty(): boolean {
         return this.size === 0;
@@ -60,7 +60,6 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
         const node: SinglyLinkedListNode<T> = this.head!;
         this.head = this.head!.next;
         this.size--;
-
         return node.data;
     }
 
@@ -103,7 +102,7 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
         return currentTail!.data;
     }
     /**
-     * Inserts the data as a new node at the given index.x
+     * Inserts the data as a new node at the given index.
      */
     insertAt(index: number, data: T): void {
         if(index < 0 || index >= this.size) {

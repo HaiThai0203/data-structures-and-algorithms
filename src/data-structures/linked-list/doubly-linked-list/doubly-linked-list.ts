@@ -122,7 +122,7 @@ export class DoublyLinkedList<T> implements ILinkedList<T> {
         this.size++;
     }
     /**
-     * Removes a node at a specific index.x
+     * Removes a node at a specific index.
      */
     removeAt(index: number): T | undefined {
         if (index < 0 || index >= this.size) {
@@ -152,7 +152,7 @@ export class DoublyLinkedList<T> implements ILinkedList<T> {
         this.size = 0;
     }
     /**
-     * Converts the list to an array.x
+     * Converts the list to an array.
      */
     toArray(): T[] {
         const array: T[] = [];
@@ -164,7 +164,7 @@ export class DoublyLinkedList<T> implements ILinkedList<T> {
         return array;
     }
     /**
-     * Gets the length of the list.x
+     * Gets the length of the list.
      */
     length(): number {
         return this.size;
