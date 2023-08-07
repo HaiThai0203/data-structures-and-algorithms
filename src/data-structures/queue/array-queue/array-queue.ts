@@ -5,7 +5,7 @@
  * The time complexity of the operations is O(n).
  */
 
-import { IQueue } from "./queue.interface";
+import { IQueue } from "../queue.interface";
 
 export class Queue<T> implements IQueue<T> {
     private queue: T[] = [];

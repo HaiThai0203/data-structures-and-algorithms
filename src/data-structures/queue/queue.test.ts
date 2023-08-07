@@ -1,4 +1,4 @@
-import { Queue } from '../queue';
+import { Queue } from './array-queue/array-queue';
 
 type QueueContructor = new <T>() => Queue<T>;
 export function testQueue(Queue: QueueContructor) {

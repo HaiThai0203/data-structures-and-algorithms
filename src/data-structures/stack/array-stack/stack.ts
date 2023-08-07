@@ -5,7 +5,7 @@
  * This is a class-based implementation of a Stack.
  */
 
-import { IStack } from "./stack.interface";
+import { IStack } from "../stack.interface";
 
 export class Stack<T> implements IStack<T> {
     private stack: T[] = [];
@@ -22,11 +22,11 @@ export class Stack<T> implements IStack<T> {
     /**
      * Add a new element to the stack.
      */
-    push(value: T) {
+    push(data: T) {
         if (this.length() + 1 > this.limit) {
             throw new Error('Stack Overflow');
         }
-        this.stack.push(value);
+        this.stack.push(data);
     }
 
     /**

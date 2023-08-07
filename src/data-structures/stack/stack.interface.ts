@@ -1,7 +1,7 @@
 export interface IStack<T> {
-    push(value: T): void;
-    pop(): void;
-    isEmpty(): void;
+    push(data: T): void;
+    pop(): T;
+    isEmpty(): boolean;
     top(): T | null;
     length(): number;
 }

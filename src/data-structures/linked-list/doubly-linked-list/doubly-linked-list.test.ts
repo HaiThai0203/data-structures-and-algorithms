@@ -1,5 +1,5 @@
-import { DoublyLinkedList } from "../doubly-linked-list/doubly-linked-list";
-import { testLinkedList } from "./linked-list";
+import { DoublyLinkedList } from "./doubly-linked-list";
+import { testLinkedList } from "../linked-list.test";
 
 describe("Doubly linked list", () => {
     testLinkedList(DoublyLinkedList)

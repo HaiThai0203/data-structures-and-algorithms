@@ -1,4 +1,4 @@
-import { ILinkedList } from "../linked-list.interface";
+import { ILinkedList } from "./linked-list.interface";
 
 type LinkedListConstructor = new <T>() => ILinkedList<T>;
 

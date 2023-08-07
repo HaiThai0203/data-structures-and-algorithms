@@ -53,7 +53,7 @@ export class SinglyLinkedList<T> implements ILinkedList<T> {
     /**
      * Removes the first node of the list
      */
-    pop(): T | undefined {
+    pop(): T {
         if(this.isEmpty()) {
             throw new Error("Index out of bounds");
         }
