@@ -13,6 +13,6 @@ Here are a few advantages of a linked list that is listed below, it will help yo
 
 # ➡➡Types of linked lists: 
 There are mainly three types of linked lists:
-  * [Singly Linked List](src/data-structures/linked-list/singly-linked-list)
-  * [Doubly Linked List](src/data-structures/linked-list/doubly-linked-list)
+  * [Singly Linked List](./singly-linked-list)
+  * [Doubly Linked List](./doubly-linked-list)
   * Circular Linked List
