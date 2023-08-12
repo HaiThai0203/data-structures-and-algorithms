@@ -4,10 +4,16 @@
 
 A data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
 
-* `Easy` [Singly Linked List](src/data-structures/linked-list/singly-linked-list)
-* `Easy` [Doubly Linked List](src/data-structures/linked-list/doubly-linked-list)
-* `Easy` [Queue](src/data-structures/queue/array)
-* `Easy` [Stack](src/data-structures/stack/array)
+* [Linked List](src/data-structures/linked-list)
+  * `Easy` [Singly Linked List](src/data-structures/linked-list/singly-linked-list)
+  * `Easy` [Doubly Linked List](src/data-structures/linked-list/doubly-linked-list)
+* `Easy` [Queue](src/data-structures/queue/)
+  * `Easy` [Array Queue](src/data-structures/queue/array)
+  * `Easy` [Circular Queue](src/data-structures/queue/array)
+  * `Easy` [Linked List Queue](src/data-structures/queue/array)
+* `Easy` [Stack](src/data-structures/stack)
+  * `Easy` [Stack](src/data-structures/stack/array)
+  * `Easy` [Stack](src/data-structures/stack/linked-list-stack/)
 * `Medium` [Hash Table](src/data-structures/hash-table)
 * `Medium` [Heap](src/data-structures/heap) - max and min heap versions
 * `Medium` [Priority Queue](src/data-structures/priority-queue)
