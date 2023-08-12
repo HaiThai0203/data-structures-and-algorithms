@@ -12,8 +12,8 @@ A data structure is a storage that is used to store and organize data. It is a w
   * `Easy` [Circular Queue](src/data-structures/queue/array)
   * `Easy` [Linked List Queue](src/data-structures/queue/array)
 * [Stack](src/data-structures/stack)
-  * `Easy` [Stack](src/data-structures/stack/array)
-  * `Easy` [Stack](src/data-structures/stack/linked-list-stack/)
+  * `Easy` [Array Stack](src/data-structures/stack/array)
+  * `Easy` [Linked List Stack](src/data-structures/stack/linked-list-stack/)
 * `Medium` [Hash Table](src/data-structures/hash-table)
 * `Medium` [Heap](src/data-structures/heap) - max and min heap versions
 * `Medium` [Priority Queue](src/data-structures/priority-queue)
