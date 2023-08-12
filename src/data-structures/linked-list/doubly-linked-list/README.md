@@ -264,9 +264,5 @@ reverse(): DoublyLinkedList<T> | null {
 # How to run test
 
 ```
-cd src/data-structures/linked-list/test && npm test doubly-linked-list.test.ts
-```
-or
-```
-npm test src/data-structures/linked-list/test/doubly-linked-list.test.ts
+npm test src/data-structures/linked-list/singly-linked-list
 ```
