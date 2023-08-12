@@ -1,6 +1,6 @@
-import { Queue } from './array-queue/array-queue';
+import { IQueue } from './queue.interface';
 
-type QueueContructor = new <T>() => Queue<T>;
+type QueueContructor = new <T>() => IQueue<T>;
 export function testQueue(Queue: QueueContructor) {
     it("enqueue() should add a new element to the queue", () => {
         const queue = new Queue<number>();

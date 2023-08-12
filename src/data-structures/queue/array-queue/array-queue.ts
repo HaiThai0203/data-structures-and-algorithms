@@ -16,7 +16,7 @@ export class Queue<T> implements IQueue<T> {
         this.queue.push(value);
     }
     /**
-     * Removes an element from the queue and returns it
+     * Removes an element from the queue and returns it.
      */
     dequeue(): T {
         if (this.isEmpty()) {
